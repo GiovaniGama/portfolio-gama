@@ -1,15 +1,22 @@
+@import url(style/variables-styles.scss);
+
 *{
     padding: 0;
     margin: 0;
-    font-family: inter;
+    font-family: 'Inter', sans-serif;
     box-sizing: border-box;
 }
 
 a{
     text-decoration: none;
+    color: var(--color-white);
     transition: .4s;
 }
 
 a:hover{
-    border-bottom: 3px #fff solid;
+    border-bottom: 3px var(--color-white) solid;
+}
+
+ul{
+    list-style-type: none;
 }

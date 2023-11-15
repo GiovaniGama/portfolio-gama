@@ -1,0 +1,25 @@
+@import url(../../../style/variables-styles.scss);
+
+.menu{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    &__container{
+        &--img{
+            width: 64px;
+        }
+    }
+
+    &__itens{
+        &--list{
+            display: flex;
+            justify-content: space-around;
+        }
+        &--item{
+            font-size: 24px;
+            font-weight: 700;
+            margin-left: 20px;
+        }
+    }
+}

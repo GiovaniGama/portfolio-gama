@@ -1,0 +1,18 @@
+@import url(../style/variables-styles.scss);
+
+.page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-green-avocado);
+    height: 100vh;
+    padding: 16px;
+    
+    &__brow{
+        background-color: var(--color-brow);
+        border-radius: 16px;
+        padding: 24px;
+        width: 100%;
+        height: 100%;
+    }
+}

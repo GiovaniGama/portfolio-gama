@@ -1,0 +1,16 @@
+@import url(../../../style/variables-styles.scss);
+
+.footer{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    bottom: 0;
+    margin-bottom: 20px;
+
+    &__title{
+        font-size: 16px;
+        color: var(--color-white);
+        font-weight: 700;
+    }
+}

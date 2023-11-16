@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./menu.component.scss']
 })
 export class MenuComponent {
+  itens: string[] = ['Sobre', 'Experiência', 'Projetos', 'Contato'];
+  selectedItem: string | null = null;
 
+  selectItem(item: string){
+    this.selectedItem = item;
+  }
 }

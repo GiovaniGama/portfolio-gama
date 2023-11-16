@@ -21,5 +21,8 @@
             font-weight: 700;
             margin-left: 20px;
         }
+        &--selected{
+            border-bottom: 3px var(--color-white) solid;
+        }
     }
 }

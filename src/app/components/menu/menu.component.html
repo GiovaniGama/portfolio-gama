@@ -5,10 +5,9 @@
     <div class="menu__itens">
         <nav>
             <ul class="menu__itens--list">
-                <li class="menu__itens--item"><a routerLink="">Sobre</a></li>
-                <li class="menu__itens--item"><a routerLink="">Experiência</a></li>
-                <li class="menu__itens--item"><a routerLink="">Projetos</a></li>
-                <li class="menu__itens--item"><a routerLink="">Contato</a></li>
+                <li *ngFor="let item of itens" class="menu__itens--item" [ngClass]="{ 'menu__itens--selected': selectedItem === item }" (click)="selectItem(item)">
+                    <a [routerLink]="item">{{item}}</a>
+                </li>
             </ul>
         </nav>
     </div>

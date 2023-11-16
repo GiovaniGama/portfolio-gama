@@ -5,8 +5,11 @@
     <div class="menu__itens">
         <nav>
             <ul class="menu__itens--list">
-                <li *ngFor="let item of itens" class="menu__itens--item" [ngClass]="{ 'menu__itens--selected': selectedItem === item }" (click)="selectItem(item)">
-                    <a [routerLink]="item">{{item}}</a>
+                <li *ngFor="let item of itens" 
+                    class="menu__itens--item" 
+                    [routerLinkActive]="['menu__itens--selected']"
+                    [routerLinkActiveOptions]="{ exact: true }">
+                    <a [routerLink]="item.routeMenu">{{item.nameMenu}}</a>
                 </li>
             </ul>
         </nav>

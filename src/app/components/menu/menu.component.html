@@ -4,10 +4,22 @@
     </div>
     <div class="menu__itens">
         <nav>
-            <ul class="menu__itens--list">
-                <li *ngFor="let item of itens" 
-                    class="menu__itens--item" 
-                    [routerLinkActive]="['menu__itens--selected']"
+            <ul class="menu__itens--list"*ngIf="screenWidth > 701">
+                <li *ngFor="let item of itens" class="menu__itens--item" [routerLinkActive]="['menu__itens--selected']"
+                    [routerLinkActiveOptions]="{ exact: true }">
+                    <a [routerLink]="item.routeMenu">{{item.nameMenu}}</a>
+                </li>
+            </ul>
+        </nav>
+        <nav class="menu__lines--nav" *ngIf="screenWidth < 701">
+            <input type="checkbox" class="menu__input">
+            <div class="menu__lines">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="menu__lines--list">
+                <li *ngFor="let item of itens" class="menu__lines--item" [routerLinkActive]="['menu__itens--selected']"
                     [routerLinkActiveOptions]="{ exact: true }">
                     <a [routerLink]="item.routeMenu">{{item.nameMenu}}</a>
                 </li>

@@ -33,6 +33,7 @@ export class MenuComponent{
   ];
 
   selectedItem: string | null = null;
+  screenWidth: number = window.innerWidth;
 
   constructor(private router: Router) {
     this.router.events.subscribe((event) => {
@@ -40,6 +41,8 @@ export class MenuComponent{
             this.updateItemSelected();
         }
     });
+
+    window.addEventListener('resize', this.onResize.bind(this));
   }
 
   updateItemSelected() {
@@ -51,5 +54,10 @@ export class MenuComponent{
     } else {
         this.selectedItem = '';
     }
+  }
+
+  onResize() {
+    this.screenWidth = window.innerWidth;
+    console.log(this.screenWidth)
   }
 }
